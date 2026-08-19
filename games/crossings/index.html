@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Crossings</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Crossings</h1>
+    <button type="button" id="new-game">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> White (you) vs Black (AI). Move a single piece one step in any direction, or surge a straight phalanx up to as many squares as pieces in the group. Capture a smaller enemy group or lone piece ahead on that line. Reach the far row for a crossing — if the opponent cannot answer with a crossing on the next turn, you win.
+  </p>
+  <div class="stage">
+    <p class="status" id="status">Your turn (White).</p>
+    <p class="hint" id="hint">Select a contiguous line of your pieces, then a destination.</p>
+    <div id="board" class="board"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

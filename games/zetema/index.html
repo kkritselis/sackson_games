@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zetema — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Zetema</h1>
+    <button type="button" id="btn-new" class="btn">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    Two-player Zetema with a 65-card deck (hearts duplicated). Each turn: play a card onto its rank pile,
+    declare a marriage (K+Q), flush, sequence, or assembly (five of a rank). Completing a five-card rank pile scores a trick.
+    First to 300 points wins. You play against a heuristic computer.
+  </p>
+  <div class="stage">
+    <div class="status-bar">
+      <span id="status">Your turn.</span>
+      <span>You <strong id="score-you">0</strong> · AI <strong id="score-ai">0</strong> · Stock <span id="stock-n">0</span>
+        · Dup suit: <em>hearts</em></span>
+    </div>
+    <div class="table-piles" id="piles"></div>
+    <div class="actions" id="actions"></div>
+    <div class="hands">
+      <div>
+        <h2>Computer (<span id="ai-n">6</span>)</h2>
+        <div id="ai-hand" class="hand"></div>
+      </div>
+      <div>
+        <h2>You</h2>
+        <div id="you-hand" class="hand"></div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

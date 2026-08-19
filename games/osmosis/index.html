@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Osmosis</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Osmosis</h1>
+    <button type="button" id="btn-new">New hand</button>
+  </header>
+  <p class="how">
+    <strong>How to play (2-player):</strong> Offer a hand card to your opponent. They must trade high (higher same suit),
+    trade low (7 or low sequence in that suit), or trade off (two any cards). Table cards can answer.
+    Pick up table cards when your hand empties — 4 or fewer cards loses.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="panel">
+      <h2>Unused (block low trades in those suits)</h2>
+      <div id="unused" class="hand"></div>
+    </div>
+    <div class="panel">
+      <h2>AI table</h2>
+      <div id="ai-table" class="hand"></div>
+      <p class="muted">AI hand: <span id="ai-hand-count">0</span> · pickups: <span id="ai-pickups">0</span></p>
+    </div>
+    <div class="panel" id="offer-panel" hidden>
+      <h2>Answer this offer</h2>
+      <div id="offer-card" class="hand"></div>
+      <div class="toolbar" id="trade-btns"></div>
+      <div id="pick-extra" class="hand"></div>
+    </div>
+    <div class="panel">
+      <h2>Your table</h2>
+      <div id="you-table" class="hand"></div>
+    </div>
+    <div class="panel">
+      <h2>Your hand — click a card to offer</h2>
+      <div id="you-hand" class="hand"></div>
+      <p class="muted">Pickups: <span id="you-pickups">0</span></p>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

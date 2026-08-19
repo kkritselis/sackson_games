@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Focus — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Focus</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    Stacks move orthogonally a number of spaces equal to their height (or fewer, taking only the top pieces).
+    Control a stack by owning the top piece. Stacks cap at 5; excess from the bottom becomes captures (enemy) or reserves (yours).
+    On your turn you may place one reserve on any square instead of moving. Immobilize the opponent (no controlled stacks and no reserves) to win.
+    You are White vs the computer (Black).
+  </section>
+  <div class="stage">
+    <div class="hud">
+      <div class="side you">
+        <span>You (White)</span>
+        <div>Reserves: <strong id="res-w">0</strong></div>
+        <div>Captures: <strong id="cap-w">0</strong></div>
+      </div>
+      <div class="status" id="status">Your turn</div>
+      <div class="side ai">
+        <span>Computer (Black)</span>
+        <div>Reserves: <strong id="res-b">0</strong></div>
+        <div>Captures: <strong id="cap-b">0</strong></div>
+      </div>
+    </div>
+    <div class="board-wrap">
+      <div id="board" class="board" role="grid" aria-label="Focus board"></div>
+    </div>
+    <div class="actions">
+      <button type="button" id="btn-reserve" disabled>Place reserve</button>
+      <button type="button" id="btn-cancel" disabled>Cancel</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

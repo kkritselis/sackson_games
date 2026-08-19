@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Last Word — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Last Word</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    A 9×9 grid starts with 9 random center letters. Place a letter adjacent (including diagonally) to at least two existing letters.
+    Using the new letter plus letters in line with it (anagrams allowed along each line), form words in at least two directions.
+    Score is the product of the lengths of those words. Any alphabetic string of length ≥ 2 is accepted for playability.
+    Game ends when all four edges have at least one letter. Highest score wins. Vs computer.
+  </section>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <div class="hud">
+      <div>You: <strong id="sc-you">0</strong></div>
+      <div>AI: <strong id="sc-ai">0</strong></div>
+    </div>
+    <div id="board" class="board"></div>
+    <div class="compose">
+      <label>Letter <input id="letter" maxlength="1" size="2" /></label>
+      <div id="word-forms"></div>
+      <button type="button" id="btn-play" class="primary">Play letter</button>
+    </div>
+  </div>
+  <script src="words.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

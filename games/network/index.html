@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Network — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Network</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    Place 10 checkers each, then relocate them. Build a network of at least 6 of your pieces connecting your two goal areas along straight orthogonal or diagonal lines (enemy pieces block). Friendly groups may not exceed 2 adjoining pieces (orthogonal or diagonal). Corners are dead. You are Black (top/bottom goals) vs the computer (White, left/right goals). Second player gets the privilege of one size-3 or size-4 group during placement.
+  </section>
+  <div class="stage">
+    <div class="hud">
+      <span id="status">Place a piece</span>
+      <span id="counts"></span>
+    </div>
+    <div id="board" class="board"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

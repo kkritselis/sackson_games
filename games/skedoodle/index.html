@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Skedoodle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Skedoodle</h1>
+    <button type="button" id="new-game">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> Pick a master number (3–9). Players take turns writing a new whole number from 1–30 derived from the previous one by digit math, doubling, halving, squaring, or square root (from 1, jump anywhere unused). Score when your number contains the master or its digits combine to it. Highest score when no moves remain wins.
+  </p>
+  <div class="stage">
+    <div class="setup" id="setup">
+      <label>Master number
+        <select id="master">
+          <option>3</option><option>4</option><option selected>5</option>
+          <option>6</option><option>7</option><option>8</option><option>9</option>
+        </select>
+      </label>
+      <button type="button" id="start">Start</button>
+    </div>
+    <p class="status" id="status"></p>
+    <div class="current" id="current"></div>
+    <div class="scores">You: <strong id="you-score">0</strong> · AI: <strong id="ai-score">0</strong></div>
+    <div class="used" id="used"></div>
+    <div class="moves" id="moves"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

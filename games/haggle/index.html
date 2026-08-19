@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Haggle — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Haggle</h1>
+    <button type="button" id="btn-new" class="btn">New round</button>
+  </header>
+
+  <p class="how">
+    <strong>Adaptation.</strong> Classic Haggle is a party free-for-all. Here you and four AI traders
+    each start with colored cards and two secret info slips. Trade cards and/or info with bots
+    before time runs out, then submit a hand of up to 13 cards. Scoring uses <em>all</em> secret
+    rules (randomized each round among the slips). Highest scored hand wins.
+  </p>
+
+  <main class="stage">
+    <section class="panel hud">
+      <div>Time <strong id="timer">3:00</strong></div>
+      <div>Known rules <strong id="known-count">0</strong> / 15</div>
+      <button type="button" id="btn-submit" class="btn primary">Submit hand &amp; score</button>
+    </section>
+
+    <div class="layout">
+      <section class="panel">
+        <h2>Your cards</h2>
+        <p class="sub">Click cards to mark them for a trade offer (or exclude from final hand).</p>
+        <div id="your-cards" class="cards"></div>
+        <h2>Your info slips</h2>
+        <ul id="your-info" class="info-list"></ul>
+        <h2>Rules you have learned</h2>
+        <ul id="known-rules" class="info-list"></ul>
+      </section>
+
+      <section class="panel">
+        <h2>Traders</h2>
+        <div id="traders" class="traders"></div>
+        <div class="trade-box" id="trade-box" hidden>
+          <h3>Trade with <span id="trade-name"></span></h3>
+          <p id="trade-summary" class="sub"></p>
+          <div class="trade-opts">
+            <label><input type="checkbox" id="offer-cards" checked /> Offer selected cards</label>
+            <label><input type="checkbox" id="offer-info" /> Offer a random unread slip of yours</label>
+            <label><input type="checkbox" id="ask-cards" checked /> Ask for cards they will pick</label>
+            <label><input type="checkbox" id="ask-info" checked /> Ask to read one of their slips</label>
+          </div>
+          <div class="actions">
+            <button type="button" id="btn-propose" class="btn primary">Propose trade</button>
+            <button type="button" id="btn-cancel-trade" class="btn">Cancel</button>
+          </div>
+          <p id="trade-result" class="status"></p>
+        </div>
+      </section>
+    </div>
+
+    <section class="panel" id="results" hidden>
+      <h2>Final scores</h2>
+      <div id="scoreboard"></div>
+      <details id="all-rules">
+        <summary>Reveal all scoring rules</summary>
+        <ol id="rules-reveal"></ol>
+      </details>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

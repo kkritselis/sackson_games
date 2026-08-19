@@ -1,0 +1,385 @@
+{
+  "title": "A Gamut of Games",
+  "source": "Sid Sackson — A Gamut of Games (Dover reprint of the 1982 edition)",
+  "note": "Digital adaptations for solo play with computer opponents where needed. Brief how-to text only; not a reprint of the book.",
+  "chapters": [
+    {
+      "id": "ch1",
+      "title": "In Search of Big and Little Game",
+      "games": [
+        {
+          "id": "mate",
+          "title": "Mate",
+          "author": "G. Capellen",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "A pure-skill card duel with a 20-card deck.",
+          "path": "games/mate/"
+        },
+        {
+          "id": "blue-and-gray",
+          "title": "Blue and Gray",
+          "author": "Henry Busch & Arthur Jaeger",
+          "players": "2",
+          "equipment": "Board & pieces",
+          "blurb": "March your captain along the line to the center star.",
+          "path": "games/blue-and-gray/"
+        },
+        {
+          "id": "le-truc",
+          "title": "Le Truc",
+          "author": "Anonymous",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "Little French poker — bluff and raise for tricks.",
+          "path": "games/le-truc/"
+        },
+        {
+          "id": "plank",
+          "title": "Plank",
+          "author": "Anonymous",
+          "players": "2–4",
+          "equipment": "Pieces",
+          "blurb": "Tic-tac-toe grown up — with color and movement.",
+          "path": "games/plank/"
+        },
+        {
+          "id": "zetema",
+          "title": "Zetema",
+          "author": "Anonymous",
+          "players": "2–6",
+          "equipment": "Cards",
+          "blurb": "Marriages, imperials, and judgment — not brain-busting.",
+          "path": "games/zetema/"
+        },
+        {
+          "id": "hekaton",
+          "title": "Hekaton",
+          "author": "Anonymous",
+          "players": "2–4",
+          "equipment": "Cards",
+          "blurb": "Build toward 100 with clever digit play.",
+          "path": "games/hekaton/"
+        }
+      ]
+    },
+    {
+      "id": "ch2",
+      "title": "Game Inventors Are People Too",
+      "games": [
+        {
+          "id": "lines-of-action",
+          "title": "Lines of Action",
+          "author": "Claude Soucie",
+          "players": "2",
+          "equipment": "Checkerboard",
+          "blurb": "Move by the count of pieces on a line; unite your army.",
+          "path": "games/lines-of-action/"
+        },
+        {
+          "id": "cups",
+          "title": "Cups",
+          "author": "Arthur & Wald Amberstone",
+          "players": "2",
+          "equipment": "Cups & beans",
+          "blurb": "A modern take on Mancala sowing.",
+          "path": "games/cups/"
+        },
+        {
+          "id": "crossings",
+          "title": "Crossings",
+          "author": "Robert Abbott",
+          "players": "2",
+          "equipment": "Checkerboard",
+          "blurb": "Surge forward in groups across the board.",
+          "path": "games/crossings/"
+        },
+        {
+          "id": "lap",
+          "title": "Lap",
+          "author": "Lech Pijanowski",
+          "players": "2",
+          "equipment": "Pencil & paper",
+          "blurb": "A Battleship cousin with deeper deduction.",
+          "path": "games/lap/"
+        },
+        {
+          "id": "three-musketeers",
+          "title": "Three Musketeers",
+          "author": "Haar Hoolim",
+          "players": "2",
+          "equipment": "5×5 board",
+          "blurb": "Force the three musketeers onto the same line — or stop them.",
+          "path": "games/three-musketeers/"
+        },
+        {
+          "id": "paks",
+          "title": "Paks",
+          "author": "Phil Laurence",
+          "players": "2–6",
+          "equipment": "Cards",
+          "blurb": "An original card craze waiting to happen.",
+          "path": "games/paks/"
+        },
+        {
+          "id": "skedoodle",
+          "title": "Skedoodle",
+          "author": "Father Daniel",
+          "players": "2–4",
+          "equipment": "Pencil & paper",
+          "blurb": "Manipulate numbers toward a scoring target.",
+          "path": "games/skedoodle/"
+        },
+        {
+          "id": "knight-chase",
+          "title": "Knight Chase",
+          "author": "Alex Randolph",
+          "players": "2",
+          "equipment": "Checkerboard",
+          "blurb": "Hide-and-seek as one knight hunts the other.",
+          "path": "games/knight-chase/"
+        },
+        {
+          "id": "origins-of-wwi",
+          "title": "Origins of World War I",
+          "author": "James Dunnigan",
+          "players": "3–5",
+          "equipment": "Board & die",
+          "blurb": "Guide a nation through pre-war diplomacy and crisis.",
+          "path": "games/origins-of-wwi/"
+        }
+      ]
+    },
+    {
+      "id": "ch3",
+      "title": "Those Protean Pieces of Pasteboard",
+      "games": [
+        {
+          "id": "all-my-diamonds",
+          "title": "All My Diamonds",
+          "author": "Sid Sackson",
+          "players": "4–7",
+          "equipment": "Cards & chips",
+          "blurb": "A continuing auction — win by buying or selling.",
+          "path": "games/all-my-diamonds/"
+        },
+        {
+          "id": "osmosis",
+          "title": "Osmosis",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Cards",
+          "blurb": "Subtle hand-building — what is a good play?",
+          "path": "games/osmosis/"
+        },
+        {
+          "id": "patterns",
+          "title": "Patterns",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Cards & chips",
+          "blurb": "A card game that feels like a board game.",
+          "path": "games/patterns/"
+        },
+        {
+          "id": "suit-yourself",
+          "title": "Suit Yourself",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Cards",
+          "blurb": "Choose cards from the table with care.",
+          "path": "games/suit-yourself/"
+        },
+        {
+          "id": "bowling-solitaire",
+          "title": "Bowling Solitaire",
+          "author": "Sid Sackson",
+          "players": "1",
+          "equipment": "Cards",
+          "blurb": "Knock down pins — a red 9 is not on a black 10.",
+          "path": "games/bowling-solitaire/"
+        },
+        {
+          "id": "card-baseball",
+          "title": "Card Baseball",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "Skillful baseball with a deck, not a bat.",
+          "path": "games/card-baseball/"
+        },
+        {
+          "id": "slam",
+          "title": "Slam",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "Two-hand bidding with Bridge flavor.",
+          "path": "games/slam/"
+        },
+        {
+          "id": "poke",
+          "title": "Poke",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "Two-hand poker you can play for fun.",
+          "path": "games/poke/"
+        },
+        {
+          "id": "color-gin",
+          "title": "Color Gin",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Cards",
+          "blurb": "Hollywood Gin plus color scoring twists.",
+          "path": "games/color-gin/"
+        }
+      ]
+    },
+    {
+      "id": "ch4",
+      "title": "New Battles on an Old Battlefield",
+      "games": [
+        {
+          "id": "focus",
+          "title": "Focus",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Checkerboard",
+          "blurb": "Stack, control, and capture — rules in five minutes.",
+          "path": "games/focus/"
+        },
+        {
+          "id": "network",
+          "title": "Network",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Checkerboard",
+          "blurb": "Place, then move — complete a connecting network.",
+          "path": "games/network/"
+        },
+        {
+          "id": "take-it-away",
+          "title": "Take It Away",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Checkerboard & chips",
+          "blurb": "Jump for points — know when to drop out.",
+          "path": "games/take-it-away/"
+        }
+      ]
+    },
+    {
+      "id": "ch5",
+      "title": "Grab a Pencil",
+      "games": [
+        {
+          "id": "hold-that-line",
+          "title": "Hold That Line",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Pencil & paper",
+          "blurb": "Simple, challenging — and no chance of a draw.",
+          "path": "games/hold-that-line/"
+        },
+        {
+          "id": "cutting-corners",
+          "title": "Cutting Corners",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Pencil & paper",
+          "blurb": "Claim corners and edges in a tight duel.",
+          "path": "games/cutting-corners/"
+        },
+        {
+          "id": "paper-boxing",
+          "title": "Paper Boxing",
+          "author": "Sid Sackson",
+          "players": "2",
+          "equipment": "Pencil & paper",
+          "blurb": "Each fighter builds a board, then boxes.",
+          "path": "games/paper-boxing/"
+        },
+        {
+          "id": "patterns-ii",
+          "title": "Patterns II",
+          "author": "Sid Sackson",
+          "players": "3–6",
+          "equipment": "Pencil & paper",
+          "blurb": "Inductive logic — a rarity among games.",
+          "path": "games/patterns-ii/"
+        },
+        {
+          "id": "last-word",
+          "title": "Last Word",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Pencil & paper",
+          "blurb": "Place letters and make words in many directions.",
+          "path": "games/last-word/"
+        },
+        {
+          "id": "property",
+          "title": "Property",
+          "author": "Sid Sackson",
+          "players": "2–6",
+          "equipment": "Paper, cards, chips",
+          "blurb": "A full board game of money and rents on paper.",
+          "path": "games/property/"
+        }
+      ]
+    },
+    {
+      "id": "ch6",
+      "title": "A Miscellany of Games",
+      "games": [
+        {
+          "id": "solitaire-dice",
+          "title": "Solitaire Dice",
+          "author": "Sid Sackson",
+          "players": "1",
+          "equipment": "5 dice",
+          "blurb": "Every throw asks for a new decision.",
+          "path": "games/solitaire-dice/"
+        },
+        {
+          "id": "domino-bead-game",
+          "title": "Domino Bead Game",
+          "author": "Sid Sackson",
+          "players": "2–4",
+          "equipment": "Dominos",
+          "blurb": "Weave pieces into intricate scoring patterns.",
+          "path": "games/domino-bead-game/"
+        },
+        {
+          "id": "haggle",
+          "title": "Haggle",
+          "author": "Sid Sackson",
+          "players": "Party",
+          "equipment": "Colored cards",
+          "blurb": "Trade secret rules and colored cards for the win.",
+          "path": "games/haggle/"
+        },
+        {
+          "id": "the-no-game",
+          "title": "The No Game",
+          "author": "Anonymous",
+          "players": "Party",
+          "equipment": "Ribbons",
+          "blurb": "Never say no — or lose your ribbons.",
+          "path": "games/the-no-game/"
+        },
+        {
+          "id": "change-change",
+          "title": "Change Change",
+          "author": "Sid Sackson",
+          "players": "1",
+          "equipment": "11 coins",
+          "blurb": "A sliding coin puzzle with endless solutions.",
+          "path": "games/change-change/"
+        }
+      ]
+    }
+  ]
+}

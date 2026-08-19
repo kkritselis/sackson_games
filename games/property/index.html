@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Property — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Property</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    Simplified two-player Property on an 8×8 grid. Play one red and one black number card (A–10; 9/10 are wild for any row/column).
+    Claim empty squares, pay rent on opponent groups (doubled if a wild is used), optionally buy with purchase units (K=4, Q=2, J=1).
+    Landing on your own square mortgages it; a second mortgage loses it. First bankruptcy ends the game — most cash wins. Vs AI.
+  </p>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <div class="hud">
+      <div>You: $<strong id="cash-you">0</strong> · units <span id="units-you">0</span></div>
+      <div>AI: $<strong id="cash-ai">0</strong> · units <span id="units-ai">0</span></div>
+    </div>
+    <div class="layout">
+      <div id="grid" class="grid"></div>
+      <div class="side">
+        <h2>Your hand</h2>
+        <div id="hand" class="hand"></div>
+        <p class="hint">Select one red and one black card, then click a legal square (for wilds).</p>
+        <div class="toolbar">
+          <button type="button" id="btn-play" class="primary">Play selected</button>
+          <button type="button" id="btn-buy" disabled>Buy after rent</button>
+          <button type="button" id="btn-skip-buy" disabled>Skip buy</button>
+        </div>
+        <div id="purchase" class="purchase"></div>
+      </div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

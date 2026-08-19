@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>All My Diamonds</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>All My Diamonds</h1>
+    <button type="button" id="btn-new">New hand</button>
+  </header>
+  <p class="how">
+    <strong>How to play:</strong> Auction entire holdings from a set (a suit, or pictures / high / middle / low ranks).
+    High bidder pays you; you tax the pool. Collect 10 cards in one set to take the pool. You vs 3 AIs.
+  </p>
+  <div class="stage">
+    <div class="status" id="status">Dealing…</div>
+    <div class="scoreboard panel" id="bank"></div>
+    <div class="panel" id="auction-area" hidden>
+      <h2>Auction</h2>
+      <div id="auction-cards" class="hand"></div>
+      <p id="auction-info" class="muted"></p>
+      <div class="toolbar" id="bid-controls"></div>
+    </div>
+    <div class="panel" id="sell-area">
+      <h2>Your turn — choose a set to auction</h2>
+      <div id="set-buttons" class="toolbar"></div>
+      <div id="preview" class="hand"></div>
+      <button type="button" class="primary" id="btn-sell" disabled>Auction selected set</button>
+    </div>
+    <div class="panel">
+      <h2>Your hand (<span id="hand-count">0</span>)</h2>
+      <div id="hand" class="hand"></div>
+    </div>
+    <div class="panel" id="opponents"></div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

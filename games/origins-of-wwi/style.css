@@ -1,0 +1,57 @@
+body.game-shell {
+  background: #e8dcc8 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath fill='%23d4c4a8' d='M0 0h40v40H0zm40 40h40v40H40z'/%3E%3C/svg%3E");
+  min-height: 100vh;
+}
+.game-shell .topbar h1 { font-family: "Libre Baskerville", serif; font-size: 1.1rem; }
+.game-shell .how { background: rgba(255, 250, 240, 0.95); }
+.layout { display: grid; grid-template-columns: 1fr 260px; gap: 1rem; align-items: start; }
+.map {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.6rem;
+}
+.box {
+  background: #fffaf0;
+  border: 2px solid #5c4030;
+  border-radius: 4px;
+  padding: 0.6rem;
+  min-height: 110px;
+}
+.box h3 {
+  margin: 0 0 0.4rem;
+  font-family: "Libre Baskerville", serif;
+  font-size: 0.95rem;
+}
+.pf-line { font-size: 0.82rem; margin: 0.15rem 0; }
+.pf-line.treaty { font-weight: 700; color: #1d4e89; }
+.panel {
+  background: #fff;
+  border: 1px solid #c4b49a;
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+.panel label { display: block; margin: 0.4rem 0; font-size: 0.9rem; }
+.panel select, .panel input, .panel button, #new-game {
+  width: 100%;
+  margin-top: 0.2rem;
+  padding: 0.35rem;
+  font: inherit;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  box-sizing: border-box;
+}
+.panel button { cursor: pointer; background: #eee; margin-bottom: 0.35rem; }
+.panel button.primary { background: #1d4e89; color: #fff; border-color: #1d4e89; }
+.log {
+  font-size: 0.75rem;
+  white-space: pre-wrap;
+  max-height: 160px;
+  overflow: auto;
+  background: #f5f0e6;
+  padding: 0.4rem;
+}
+.scores { margin-top: 1rem; font-weight: 600; }
+.die-wrap { text-align: center; margin: 0.4rem 0; }
+@media (max-width: 800px) {
+  .layout { grid-template-columns: 1fr; }
+}

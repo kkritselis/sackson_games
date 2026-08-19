@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Slam</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Slam</h1>
+    <button type="button" id="btn-new">New rubber</button>
+  </header>
+  <p class="how">
+    <strong>How to play (core):</strong> 32-card deck. Bid in three rounds as cards are dealt,
+    then name trump (or no-trump / nullo). Lay off 3 secret cards. Play 7 four-card tricks + 3 lay-off tricks.
+    Book is 5; score overtricks by trump suit. Vs AI. Full rubber bonuses simplified.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="score"></div>
+    <div class="panel" id="bid-panel">
+      <h2>Bidding</h2>
+      <div class="toolbar" id="bid-btns"></div>
+    </div>
+    <div class="panel" id="trump-panel" hidden>
+      <h2>Name contract</h2>
+      <div class="toolbar" id="trump-btns"></div>
+    </div>
+    <div class="panel" id="layoff-panel" hidden>
+      <h2>Choose 3 lay-off cards</h2>
+      <div class="toolbar"><button type="button" class="primary" id="btn-layoff" disabled>Confirm lay-off</button></div>
+    </div>
+    <div class="panel">
+      <h2>Trick</h2>
+      <div id="trick" class="hand"></div>
+      <p class="muted" id="trick-info"></p>
+    </div>
+    <div class="panel">
+      <h2>Your hand</h2>
+      <div id="hand" class="hand"></div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

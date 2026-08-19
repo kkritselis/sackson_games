@@ -1,0 +1,59 @@
+body.game-shell {
+  background: linear-gradient(160deg, #0f172a, #1e293b 40%, #f59e0b 140%);
+  min-height: 100vh;
+  color: #e2e8f0;
+}
+.game-shell .topbar { background: rgba(15, 23, 42, 0.9); color: #fff; border-color: #334155; }
+.game-shell .topbar a { color: #fbbf24; }
+.game-shell .topbar h1 { font-family: "Space Grotesk", sans-serif; }
+.game-shell .how { background: rgba(30, 41, 59, 0.95); color: #cbd5e1; border-color: #475569; }
+.game-shell .how strong { color: #f8fafc; }
+
+.setup { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 1rem; }
+select, button {
+  border-radius: 8px;
+  border: 1px solid #64748b;
+  background: #1e293b;
+  color: #f8fafc;
+  padding: 0.4rem 0.7rem;
+  font: inherit;
+  cursor: pointer;
+}
+button:hover { background: #334155; }
+.status { font-weight: 600; }
+.current {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: #fbbf24;
+  margin: 0.5rem 0;
+}
+.scores { margin-bottom: 0.75rem; }
+.used {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  margin-bottom: 1rem;
+  max-width: 32rem;
+}
+.chip {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #334155;
+  font-size: 0.85rem;
+}
+.chip.on { background: #475569; }
+.chip.you { background: #2563eb; }
+.chip.ai { background: #dc2626; }
+.chip.score { outline: 2px solid #fbbf24; }
+.moves { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.moves button {
+  background: #0ea5e9;
+  border-color: #0284c7;
+  font-weight: 600;
+}
+.moves button:disabled { opacity: 0.4; cursor: default; }

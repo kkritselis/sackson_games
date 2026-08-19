@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patterns II — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Patterns II</h1>
+    <button type="button" id="btn-new">New round</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    One designer fills a 6×6 grid with symbols ○ + · × in an ordered pattern. Guessers query squares, then fill remaining cells (guesses in parentheses scoring).
+    Score +1/−1 per guessed cell. Designer scores twice the gap between best and worst guesser (with give-up penalties).
+    Here you design; two computer guessers query and score against you. Or switch to Guess mode vs a computer designer.
+  </section>
+  <div class="stage">
+    <div class="mode-bar">
+      <label><input type="radio" name="mode" value="design" checked /> You design</label>
+      <label><input type="radio" name="mode" value="guess" /> You guess</label>
+    </div>
+    <p class="status" id="status"></p>
+    <div class="panels">
+      <div>
+        <h2 id="left-title">Master pattern</h2>
+        <div id="master" class="grid"></div>
+        <div class="sym-pick" id="sym-pick">
+          <button type="button" data-s="O">○</button>
+          <button type="button" data-s="+">+</button>
+          <button type="button" data-s=".">·</button>
+          <button type="button" data-s="x">×</button>
+        </div>
+        <button type="button" id="btn-ready" class="primary">Ready — release to guessers</button>
+      </div>
+      <div>
+        <h2>Guesser A</h2>
+        <div id="grid-a" class="grid"></div>
+        <p id="score-a"></p>
+        <h2>Guesser B</h2>
+        <div id="grid-b" class="grid"></div>
+        <p id="score-b"></p>
+      </div>
+      <div id="guess-panel" class="hidden">
+        <h2>Your sheet</h2>
+        <div id="grid-you" class="grid"></div>
+        <div class="actions">
+          <button type="button" id="btn-query" class="primary">Query selected</button>
+          <button type="button" id="btn-submit">Submit guesses</button>
+          <button type="button" id="btn-giveup">Give up</button>
+        </div>
+        <p id="score-you"></p>
+      </div>
+    </div>
+    <p id="designer-score"></p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

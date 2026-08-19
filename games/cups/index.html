@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Cups</h1>
+    <button type="button" id="new-game">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> Each side has four cups and a pot, sowing toward your pot. On your turn either place 1–4 beans from stock into consecutive cups from the far left, or sow a cup that holds exactly enough beans to reach the pot. Placing so your last bean lands in an empty cup captures the opposite cup into your pot. Most beans in the pot wins.
+  </p>
+  <div class="stage">
+    <p class="status" id="status">Your turn.</p>
+    <div class="board-wrap">
+      <div class="ai-row">
+        <div class="pot" id="ai-pot"><span class="label">AI pot</span><span class="count" id="ai-pot-n">0</span></div>
+        <div class="cups" id="ai-cups"></div>
+        <div class="stock">AI stock: <strong id="ai-stock">40</strong></div>
+      </div>
+      <div class="you-row">
+        <div class="stock">Your stock: <strong id="you-stock">40</strong></div>
+        <div class="cups" id="you-cups"></div>
+        <div class="pot" id="you-pot"><span class="label">Your pot</span><span class="count" id="you-pot-n">0</span></div>
+      </div>
+    </div>
+    <div class="actions" id="actions">
+      <span>Place from stock:</span>
+      <button type="button" data-place="1">1</button>
+      <button type="button" data-place="2">2</button>
+      <button type="button" data-place="3">3</button>
+      <button type="button" data-place="4">4</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

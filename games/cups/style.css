@@ -1,0 +1,109 @@
+body.game-shell {
+  background: linear-gradient(180deg, #f0e6d2 0%, #c4a574 40%, #6b4f2a 100%);
+  min-height: 100vh;
+}
+
+.game-shell .how { background: rgba(255, 252, 245, 0.95); }
+
+.status { font-weight: 600; margin-bottom: 0.75rem; }
+
+.board-wrap {
+  max-width: 640px;
+  background: #5a3d1e;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: inset 0 0 0 4px #3d2812, 0 10px 24px rgba(0, 0, 0, 0.25);
+  color: #f5ecd8;
+}
+
+.ai-row, .you-row {
+  display: grid;
+  grid-template-columns: 90px 1fr auto;
+  gap: 0.75rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.you-row { grid-template-columns: auto 1fr 90px; margin-bottom: 0; }
+
+.cups {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.cup {
+  width: 64px;
+  height: 72px;
+  border-radius: 0 0 32px 32px;
+  background: radial-gradient(circle at 50% 30%, #8b5a2b, #4a2f12);
+  border: 2px solid #2a1a08;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding-bottom: 0.4rem;
+  cursor: pointer;
+  position: relative;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.cup.sowable { box-shadow: 0 0 0 3px #f0c040; }
+.cup.blocked { opacity: 0.65; }
+.cup .beans {
+  position: absolute;
+  inset: 8px 6px 22px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: center;
+  gap: 2px;
+  pointer-events: none;
+}
+.cup .bean {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.cup.you .bean { background: #2d6cdf; }
+.cup.ai .bean { background: #d94c3a; }
+
+.pot {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 30%, #7a4e22, #2f1a0a);
+  border: 3px solid #1a0f05;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.pot .count { font-size: 1.4rem; font-weight: 700; }
+
+.stock { font-size: 0.9rem; }
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+.actions button, #new-game {
+  border: 1px solid #d0d0d0;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font: inherit;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .ai-row, .you-row { grid-template-columns: 1fr; }
+  .cup { width: 56px; height: 64px; }
+}

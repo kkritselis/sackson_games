@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mate — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Mate</h1>
+    <button type="button" id="btn-new" class="btn">New match</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    You and the computer each hold ten cards from a 20-card deck (A, 10, K, Q, 7 of each suit).
+    Lead any card; the opponent must answer with the same suit, or if they have none, the same rank.
+    The higher card (or higher suit when ranks match) leads the next move.
+    Give <em>mate</em> by leading a card your opponent cannot follow — that card’s value times the move number is your score.
+  </p>
+  <div class="stage">
+    <div class="status-bar">
+      <span id="status">Your lead.</span>
+      <span class="scores">You <strong id="score-you">0</strong> · Computer <strong id="score-ai">0</strong>
+        · Round <span id="round-label">1</span>/2 · Game <span id="game-label">1</span>/2</span>
+    </div>
+    <section class="play-area">
+      <div class="side ai-side">
+        <h2>Computer</h2>
+        <div id="ai-hand" class="hand"></div>
+        <div id="ai-played" class="played-slot"></div>
+      </div>
+      <div class="move-meta">
+        <div id="move-num">Move 1</div>
+        <div id="history" class="history"></div>
+      </div>
+      <div class="side you-side">
+        <div id="you-played" class="played-slot"></div>
+        <div id="you-hand" class="hand"></div>
+        <h2>You</h2>
+      </div>
+    </section>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

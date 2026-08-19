@@ -1,0 +1,86 @@
+body.game-shell {
+  --g-bg: #e8eef5;
+  --g-accent: #1d4e89;
+}
+
+.panel {
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
+  margin-bottom: 0.75rem;
+  max-width: 52rem;
+}
+
+.panel h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1rem;
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  min-height: 96px;
+}
+
+.card-img {
+  width: 64px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: #fff;
+}
+
+.card-img.selected {
+  border-color: var(--g-accent);
+  transform: translateY(-4px);
+}
+
+.card-img.muted {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.toolbar button,
+#btn-new,
+#btn-layoff {
+  font: inherit;
+  cursor: pointer;
+  border: 1px solid var(--g-line);
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  font-weight: 600;
+}
+
+.toolbar button.primary,
+#btn-layoff.primary,
+#btn-new {
+  background: var(--g-accent);
+  color: #fff;
+  border-color: var(--g-accent);
+}
+
+.toolbar button:disabled,
+#btn-layoff:disabled {
+  opacity: 0.45;
+  cursor: default;
+}
+
+.muted {
+  color: var(--g-muted);
+  font-size: 0.9rem;
+}
+
+.scoreboard {
+  font-weight: 600;
+}

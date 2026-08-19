@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Three Musketeers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Three Musketeers</h1>
+    <div class="controls">
+      <label>Play as
+        <select id="side">
+          <option value="musk">Musketeers</option>
+          <option value="enemy">Enemy</option>
+        </select>
+      </label>
+      <button type="button" id="new-game">New game</button>
+    </div>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> On a 5×5 board, three Musketeers face twenty-two enemies. Musketeers move orthogonally onto an enemy to capture it. Enemies move into empty orthogonal squares. Enemies win if all three Musketeers share a row or column; Musketeers win when they have no capture available on their turn.
+  </p>
+  <div class="stage">
+    <p class="status" id="status">Choose a side and begin.</p>
+    <div id="board" class="board"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

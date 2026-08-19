@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paks</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Paks</h1>
+    <button type="button" id="new-game">New hand</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> Draw from the stock. If the suit is new to the table, you must feed it and end your turn. If it matches a table suit, keep it and you may form one Pak (same-suit cards from hand totaling more than a table card). Then you may steal opposing Paks in other suits the same way. After the deck is gone, throw off Paks to match the opponent’s minimum per suit and score. First to 500 wins (this build plays hands to a running total).
+  </p>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <p class="scores">You <strong id="you-total">0</strong> · AI <strong id="ai-total">0</strong> (race to 500)</p>
+    <div class="zone">
+      <h2>Table</h2>
+      <div id="table" class="row"></div>
+      <button type="button" id="draw" class="primary">Draw</button>
+    </div>
+    <div class="zone">
+      <h2>Your hand</h2>
+      <div id="hand" class="row"></div>
+      <div class="pak-ui" id="pak-ui" hidden>
+        <label>Take table card index
+          <select id="take-idx"></select>
+        </label>
+        <button type="button" id="make-pak">Make Pak from selected hand cards</button>
+        <button type="button" id="skip-steal" hidden>Done / skip steals</button>
+      </div>
+    </div>
+    <div class="split">
+      <div>
+        <h2>Your Paks</h2>
+        <div id="you-paks" class="paks"></div>
+      </div>
+      <div>
+        <h2>AI Paks</h2>
+        <div id="ai-paks" class="paks"></div>
+      </div>
+    </div>
+    <p class="note" id="note">Click cards in hand to select them for a Pak.</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

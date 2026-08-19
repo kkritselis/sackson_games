@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Take It Away — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Take It Away</h1>
+    <div class="top-actions">
+      <label>Opponents
+        <select id="ai-count">
+          <option value="1">1 AI</option>
+          <option value="2" selected>2 AI</option>
+        </select>
+      </label>
+      <button type="button" id="btn-new">New game</button>
+    </div>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    Chips fill the board (blue=3, red=2, white=1). First turn: remove any white chip. After that, jump orthogonally or diagonally over an adjacent chip into an empty square; continue jumping with the same chip while possible. Collect jumped chips. At the start of your turn you may say “Take it away” and drop out. When only one player remains, that patsy keeps jumping; leftover chips count against them at 3× value. Highest score wins.
+  </section>
+  <div class="stage">
+    <div class="hud" id="scores"></div>
+    <p class="status" id="status"></p>
+    <div id="board" class="board"></div>
+    <div class="actions">
+      <button type="button" id="btn-tia">Take it away</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

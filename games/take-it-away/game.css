@@ -1,0 +1,48 @@
+.top-actions { display: flex; gap: 0.75rem; align-items: center; }
+.hud { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 0.5rem; }
+.player-card {
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 8px;
+  padding: 0.5rem 0.75rem;
+  min-width: 7rem;
+  font-size: 0.9rem;
+}
+.player-card.active { outline: 2px solid var(--g-accent); }
+.player-card.out { opacity: 0.55; }
+.status { font-weight: 600; margin: 0.4rem 0 0.75rem; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, 44px);
+  width: max-content;
+  border: 2px solid #333;
+}
+.cell {
+  width: 44px; height: 44px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+.cell.light { background: #cfcfcf; }
+.cell.dark { background: #555; }
+.cell.legal { box-shadow: inset 0 0 0 3px #2a9d8f; }
+.cell.sel { outline: 3px solid #1d4e89; outline-offset: -3px; }
+.chip {
+  width: 32px; height: 32px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.chip.white { background-image: url("../../assets/Chips/chipWhite.png"); }
+.chip.red { background-image: url("../../assets/Chips/chipRedWhite.png"); }
+.chip.blue { background-image: url("../../assets/Chips/chipBlue.png"); }
+.actions { margin-top: 0.75rem; }
+button, select {
+  font: inherit;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--g-line);
+  background: #fff;
+  cursor: pointer;
+}
+#btn-new, #btn-tia { background: var(--g-accent); color: #fff; border-color: var(--g-accent); }
+#btn-tia:disabled { opacity: 0.4; cursor: default; }

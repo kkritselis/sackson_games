@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Bowling Solitaire</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Bowling Solitaire</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play:</strong> Ten pin cards; three ball piles (5/3/2). Play a ball to remove 1 matching pin,
+    or 2–3 adjacent pins whose sum’s last digit matches the ball. First ball can’t clear back row alone or center F alone.
+    Later rolls must touch already-cleared pins. Clear all = strike/spare. Ten frames to 300.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="scorecard"></div>
+    <div class="panel">
+      <h2>Pins</h2>
+      <div id="pins" class="pins"></div>
+    </div>
+    <div class="panel">
+      <h2>Ball piles — click a top ball, then select pin(s)</h2>
+      <div id="balls" class="balls"></div>
+      <div class="toolbar">
+        <button type="button" class="primary" id="btn-bowl" disabled>Bowl selection</button>
+        <button type="button" id="btn-second">Take second ball</button>
+        <button type="button" id="btn-clear">Clear pin pick</button>
+      </div>
+    </div>
+    <div class="panel muted" id="used"></div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

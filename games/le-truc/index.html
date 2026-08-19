@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Le Truc — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Playfair+Display:wght@600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Le Truc</h1>
+    <button type="button" id="btn-new" class="btn">New rubber</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    French bluffing with a 32-card deck. Rank beats suit: 7 is highest, then 8, Ace, King, Queen, Jack, 10, 9.
+    Win two of three tricks (a same-rank pair spoils a trick). Before playing you may raise the stake;
+    refuse a raise and your opponent scores the current stake. First to 12 points wins a game; best of three games wins the rubber.
+  </p>
+  <div class="stage">
+    <div class="status-bar">
+      <span id="status">Dealing…</span>
+      <span class="scores">You <strong id="score-you">0</strong> · AI <strong id="score-ai">0</strong>
+        · Stake <strong id="stake">1</strong> · Games <span id="games-you">0</span>–<span id="games-ai">0</span></span>
+    </div>
+    <div class="table">
+      <div class="row ai-row">
+        <h2>Computer</h2>
+        <div id="ai-hand" class="hand"></div>
+        <div id="ai-trick" class="trick-slot"></div>
+      </div>
+      <div class="actions" id="actions"></div>
+      <div class="row you-row">
+        <div id="you-trick" class="trick-slot"></div>
+        <div id="you-hand" class="hand"></div>
+        <h2>You</h2>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Plank — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Plank</h1>
+    <button type="button" id="btn-new" class="btn">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    Place a plank (long sides touching) and put a matching-color marker on it, or add a marker to an existing plank.
+    After all six markers are down, move one each turn. Win by lining up your red, white, and blue markers in a straight row —
+    across one plank or lengthwise across three — never diagonally.
+  </p>
+  <div class="stage">
+    <div class="status-bar"><span id="status">Your turn.</span></div>
+    <div class="layout">
+      <aside class="rack">
+        <h2>Your planks</h2>
+        <div id="you-planks" class="plank-rack"></div>
+        <h2>Your markers</h2>
+        <div id="you-markers" class="marker-rack"></div>
+        <h2>Computer planks</h2>
+        <div id="ai-planks" class="plank-rack dim"></div>
+      </aside>
+      <div id="board" class="board"></div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Poke</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Poke</h1>
+    <button type="button" id="btn-new">New rubber</button>
+  </header>
+  <p class="how">
+    <strong>How to play:</strong> Draw poker then play tricks. Non-dealer may draw (doubles/redoubles penalties).
+    Dealer gets one free draw then may double/redouble. Play high-card tricks (pairs/trips can lead multi).
+    Honors for best poker hand; 20 below = game. Vs AI.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="score"></div>
+    <div class="panel" id="draw-panel">
+      <h2>Draw stage</h2>
+      <p class="muted" id="draw-info"></p>
+      <div class="toolbar" id="draw-btns"></div>
+    </div>
+    <div class="panel">
+      <h2>Trick / play</h2>
+      <div id="trick" class="hand"></div>
+      <div class="toolbar" id="play-btns"></div>
+    </div>
+    <div class="panel">
+      <h2>Your hand</h2>
+      <div id="hand" class="hand"></div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

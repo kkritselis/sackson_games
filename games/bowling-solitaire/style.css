@@ -1,0 +1,48 @@
+.pins {
+  display: grid;
+  grid-template-areas:
+    ". . a b . ."
+    ". c d e ."
+    "f g h i"
+    ". j . .";
+  gap: 0.4rem;
+  justify-content: center;
+  max-width: 420px;
+}
+.pins .pin { position: relative; }
+.pins .pin[data-p="A"] { grid-area: a; }
+.pins .pin[data-p="B"] { grid-area: b; }
+.pins .pin[data-p="C"] { grid-area: c; }
+.pins .pin[data-p="D"] { grid-area: d; }
+.pins .pin[data-p="E"] { grid-area: e; }
+.pins .pin[data-p="F"] { grid-area: f; }
+.pins .pin[data-p="G"] { grid-area: g; }
+.pins .pin[data-p="H"] { grid-area: h; }
+.pins .pin[data-p="I"] { grid-area: i; }
+.pins .pin[data-p="J"] { grid-area: j; }
+.pins .gone { opacity: 0.15; pointer-events: none; }
+.balls {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+.pile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+.score-frames {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+}
+.frame {
+  border: 1px solid var(--g-line);
+  min-width: 3.2rem;
+  padding: 0.25rem 0.35rem;
+  text-align: center;
+  font-size: 0.85rem;
+  background: #fff;
+}
+.frame .mark { font-weight: 700; color: var(--g-accent); }

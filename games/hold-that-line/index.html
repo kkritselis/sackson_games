@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hold That Line — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Hold That Line</h1>
+    <div class="top-actions">
+      <label>Grid
+        <select id="size">
+          <option value="4" selected>4×4</option>
+          <option value="5">5×5</option>
+        </select>
+      </label>
+      <button type="button" id="btn-new">New game</button>
+    </div>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    Connect dots in a continuous polyline: straight segments, no branches, no crossings, no dot reused.
+    The first player draws the opening segment of any length. After that, each turn extends from either free end.
+    The player forced to draw the last possible segment loses.
+  </section>
+  <div class="stage">
+    <p class="status" id="status">Your turn — draw the first line</p>
+    <svg id="svg" viewBox="0 0 320 320" width="320" height="320"></svg>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

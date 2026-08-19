@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Card Baseball</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Card Baseball</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play (core):</strong> Hands of 6. Pitcher leads; batter needs same suit.
+    Lower number = ball, higher = contact, picture = foul/strike. After contact, batter leads a fielding card;
+    difference × color/suit multiplier sets hit length. 9 innings vs AI manager.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="scoreboard"></div>
+    <div class="diamond panel" id="diamond">
+      <div class="base" id="b2">2</div>
+      <div class="base" id="b3">3</div>
+      <div class="base" id="b1">1</div>
+      <div class="base home">H</div>
+    </div>
+    <div class="panel">
+      <h2 id="role-label">You are batting</h2>
+      <div id="play-area" class="hand"></div>
+      <div class="toolbar" id="actions"></div>
+    </div>
+    <div class="panel">
+      <h2>Your hand</h2>
+      <div id="hand" class="hand"></div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

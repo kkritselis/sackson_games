@@ -1,0 +1,17 @@
+#opponents .opp {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  margin-bottom: 0.4rem;
+  align-items: center;
+}
+#opponents .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.9rem;
+}
+#opponents img.chip-img {
+  width: 18px;
+  height: 18px;
+}

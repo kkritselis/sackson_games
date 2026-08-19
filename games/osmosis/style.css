@@ -1,0 +1,2 @@
+#offer-panel { border-color: var(--g-accent); }
+.pickable.selected { outline: 3px solid var(--g-accent); }

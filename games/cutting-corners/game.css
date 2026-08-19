@@ -1,0 +1,20 @@
+.status { font-weight: 600; }
+.scores { margin: 0.5rem 0 0.75rem; }
+#cv {
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 8px;
+  cursor: crosshair;
+  display: block;
+  max-width: 100%;
+}
+.hint { color: var(--g-muted); font-size: 0.9rem; }
+button {
+  font: inherit;
+  padding: 0.4rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--g-line);
+  background: var(--g-accent);
+  color: #fff;
+  cursor: pointer;
+}

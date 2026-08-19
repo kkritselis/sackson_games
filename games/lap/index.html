@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Special+Elite&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Lap</h1>
+    <button type="button" id="new-game">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> Paint four continuous 16-cell sectors (I–IV) on your secret grid, then probe the computer’s map with 2×2 queries. Each call returns how many cells of each sector lie in that block. Deduce the AI’s exact partition and submit a guess; if you go first the AI gets one last probe before both may submit.
+  </p>
+  <div class="stage">
+    <p class="status" id="status">Paint your four sectors (16 cells each).</p>
+    <div class="toolbar" id="setup-bar">
+      <span>Brush:</span>
+      <button type="button" class="seg active" data-seg="1">I</button>
+      <button type="button" class="seg" data-seg="2">II</button>
+      <button type="button" class="seg" data-seg="3">III</button>
+      <button type="button" class="seg" data-seg="4">IV</button>
+      <button type="button" id="lock-map">Lock map & start</button>
+    </div>
+    <div class="grids">
+      <div>
+        <h2>Your map</h2>
+        <div id="own" class="grid"></div>
+        <p class="counts" id="own-counts"></p>
+      </div>
+      <div>
+        <h2>AI reconstruction</h2>
+        <div id="recon" class="grid"></div>
+        <div class="probe-bar">
+          <button type="button" id="probe" disabled>Probe selected 2×2</button>
+          <button type="button" id="submit" disabled>Submit guess</button>
+        </div>
+        <p class="log" id="log"></p>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cutting Corners — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Cutting Corners</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    A square has your color on two adjacent sides (blue) and the computer’s on the other two (orange).
+    Players take turns drawing an L-shaped path (one right-angle turn) from edge to edge.
+    Turn 1 needs 0 crossings, then 1, 2, 3, 4, and 5 crossings. Each new line must cross an opponent line or touch an opponent-colored edge.
+    After six lines, regions are scored: more of your color on a region’s boundary wins it. Best of two rounds.
+    <em>Simplified:</em> play uses a discrete 8×8 cell grid with axis-aligned L paths.
+  </section>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <div class="scores" id="scores"></div>
+    <canvas id="cv" width="400" height="400"></canvas>
+    <p class="hint" id="hint">Click three points: start on an edge, corner of the L, then end on an edge.</p>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

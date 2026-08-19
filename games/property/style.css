@@ -1,0 +1,43 @@
+body.game-shell { --g-bg: #e7f0e9; --g-accent: #2f6b3c; }
+.status { font-weight: 600; }
+.hud { display: flex; gap: 1.5rem; margin: 0.5rem 0 0.75rem; font-weight: 600; }
+.layout { display: flex; flex-wrap: wrap; gap: 1.25rem; align-items: flex-start; }
+.grid {
+  display: grid;
+  grid-template-columns: 28px repeat(8, 40px);
+  grid-template-rows: 28px repeat(8, 40px);
+  gap: 2px;
+  width: max-content;
+}
+.label {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: var(--g-muted);
+}
+.cell {
+  width: 40px; height: 40px;
+  border: 1px solid #b7c9bb;
+  background: #f7fbf8;
+  border-radius: 4px;
+  font-size: 0.7rem; font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+}
+.cell.you { background: #c8e6c9; }
+.cell.ai { background: #ffccbc; }
+.cell.mort { box-shadow: inset 0 0 0 2px #c62828; }
+.cell.target { outline: 2px solid var(--g-accent); }
+.hand { display: flex; flex-wrap: wrap; gap: 0.3rem; max-width: 22rem; }
+.card-img {
+  width: 58px; height: 82px; object-fit: cover; border-radius: 5px;
+  border: 2px solid transparent; cursor: pointer; background: #fff;
+}
+.card-img.selected { border-color: var(--g-accent); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0; }
+button {
+  font: inherit; cursor: pointer; border: 1px solid var(--g-line);
+  background: #fff; border-radius: 8px; padding: 0.35rem 0.7rem; font-weight: 600;
+}
+button.primary, #btn-new { background: var(--g-accent); color: #fff; border-color: var(--g-accent); }
+button:disabled { opacity: 0.4; cursor: default; }
+.hint { color: var(--g-muted); font-size: 0.9rem; max-width: 22rem; }
+.purchase { font-size: 0.9rem; color: var(--g-muted); }

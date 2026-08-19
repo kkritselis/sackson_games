@@ -1,0 +1,143 @@
+:root {
+  --mate-felt: #1a3d2e;
+  --mate-felt-edge: #0f241c;
+  --mate-gold: #c9a227;
+  --mate-cream: #f3ead8;
+}
+
+body.game-shell {
+  background:
+    radial-gradient(ellipse at 30% 20%, #2a5544 0%, transparent 50%),
+    linear-gradient(160deg, #143028 0%, #0c1c16 100%);
+  color: var(--mate-cream);
+  min-height: 100vh;
+}
+
+.game-shell .topbar {
+  background: rgba(10, 22, 18, 0.92);
+  border-bottom: 1px solid rgba(201, 162, 39, 0.35);
+}
+
+.game-shell .topbar h1 {
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: var(--mate-gold);
+  letter-spacing: 0.04em;
+}
+
+.game-shell .topbar a { color: #9ecbb8; }
+
+.game-shell .how {
+  background: rgba(243, 234, 216, 0.08);
+  border-color: rgba(201, 162, 39, 0.25);
+  color: #c5d5cc;
+}
+
+.game-shell .how strong { color: var(--mate-cream); }
+
+.btn {
+  background: var(--mate-gold);
+  color: #1a1508;
+  border: none;
+  border-radius: 6px;
+  padding: 0.45rem 0.9rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.status-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+  padding: 0.75rem 1rem;
+  background: rgba(0, 0, 0, 0.35);
+  border-radius: 8px;
+  border: 1px solid rgba(201, 162, 39, 0.2);
+}
+
+.scores strong { color: var(--mate-gold); }
+
+.play-area {
+  display: grid;
+  gap: 1.25rem;
+  background: var(--mate-felt);
+  border: 3px solid var(--mate-felt-edge);
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.35);
+}
+
+.side h2 {
+  margin: 0.35rem 0;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #8fb89f;
+  font-weight: 600;
+}
+
+.hand {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  min-height: 96px;
+  align-items: flex-end;
+}
+
+.hand .card {
+  width: 64px;
+  height: 90px;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);
+  transition: transform 0.12s ease, outline 0.12s;
+  object-fit: cover;
+  background: #fff;
+}
+
+.hand .card:hover:not(.disabled) { transform: translateY(-8px); }
+.hand .card.selected { outline: 3px solid var(--mate-gold); transform: translateY(-10px); }
+.hand .card.disabled { opacity: 0.45; cursor: default; filter: grayscale(0.4); }
+.hand .card.back { cursor: default; }
+
+.played-slot {
+  min-height: 100px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+}
+
+.played-slot .card {
+  width: 72px;
+  height: 100px;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.move-meta {
+  text-align: center;
+  padding: 0.5rem;
+  border-top: 1px dashed rgba(201, 162, 39, 0.3);
+  border-bottom: 1px dashed rgba(201, 162, 39, 0.3);
+}
+
+#move-num {
+  font-family: "Libre Baskerville", Georgia, serif;
+  color: var(--mate-gold);
+  font-size: 1.1rem;
+}
+
+.history {
+  font-size: 0.8rem;
+  color: #9bb5a8;
+  margin-top: 0.35rem;
+  min-height: 1.2em;
+}
+
+@media (min-width: 720px) {
+  .play-area { padding: 1.5rem 2rem; }
+  .hand .card { width: 70px; height: 98px; }
+}

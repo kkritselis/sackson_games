@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Change Change — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Change Change</h1>
+    <button type="button" id="btn-new" class="btn">Shuffle board</button>
+  </header>
+
+  <p class="how">
+    <strong>How to play.</strong> Eleven coins sit in three rows (4–4–4) with one empty space.
+    Slide an orthogonally adjacent coin into the gap. Reach a position that is symmetrical
+    around the middle row: top and bottom must mirror each other; the unique coin and the
+    empty space must both sit in the middle row. Play seven boards; 100 or fewer total moves is a win.
+  </p>
+
+  <main class="stage">
+    <section class="panel hud">
+      <div>Board <strong id="board-num">1</strong> / 7</div>
+      <div>Moves this board <strong id="moves">0</strong></div>
+      <div>Total moves <strong id="total">0</strong></div>
+      <button type="button" id="btn-undo" class="btn">Undo</button>
+    </section>
+
+    <section class="panel board-panel">
+      <div id="board" class="board" role="grid" aria-label="Coin grid"></div>
+      <p id="status" class="status">Slide coins into the empty space.</p>
+    </section>
+
+    <section class="panel legend">
+      <h2>Coins</h2>
+      <div class="legend-row">
+        <span class="coin penny" data-tip="Penny ×4"></span> Penny (4)
+        <span class="coin nickel" data-tip="Nickel ×2"></span> Nickel (2)
+        <span class="coin dime" data-tip="Dime ×4"></span> Dime (4)
+        <span class="coin quarter" data-tip="Quarter ×1"></span> Quarter (1)
+      </div>
+      <p id="campaign" class="campaign"></p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

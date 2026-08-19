@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Color Gin — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Color Gin</h1>
+    <button type="button" id="btn-new">New match</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    Gin Rummy rules, but you keep four suit games at once. When you knock or gin, deadwood difference
+    (plus bonuses) scores only in suits that are “clean” in your hand: a sequence spoils its suit;
+    unmatched cards spoil their suits; a three-of-a-kind spoils the missing suit. You may knock only if
+    at least one suit scores. First to 100 in a suit closes that column. Vs computer.
+  </p>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <div id="suit-scores"></div>
+    <div class="table">
+      <div>
+        <h2>Stock / discard</h2>
+        <div id="table-cards" class="piles"></div>
+      </div>
+      <div>
+        <h2>Computer (<span id="ai-count">10</span>)</h2>
+        <div id="ai-hand" class="hand"></div>
+      </div>
+      <div>
+        <h2>You — deadwood <span id="deadwood">0</span></h2>
+        <div id="hand" class="hand"></div>
+        <div class="toolbar" id="actions"></div>
+      </div>
+    </div>
+    <p class="note">Draw by clicking stock or discard. Then click a card to discard. Knock/Gin appear when ready.</p>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+.hud { display: flex; gap: 1.5rem; font-weight: 600; margin-bottom: 0.75rem; }
+.status { font-weight: 600; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(9, 40px);
+  gap: 2px;
+  width: max-content;
+  margin-bottom: 0.75rem;
+}
+.cell {
+  width: 40px; height: 40px;
+  border: 1px solid #c9b896;
+  background: #f3e6c8;
+  background-size: cover;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700;
+  font-size: 1.05rem;
+  cursor: pointer;
+  color: #1a1a1a;
+  border-radius: 3px;
+}
+.cell.has {
+  background-image: url("../../assets/Letter%20Tiles/wood_spritesheet.png");
+  background-size: 1200% 800%;
+  color: transparent;
+  text-shadow: none;
+  position: relative;
+}
+.cell.has::after {
+  content: attr(data-letter);
+  color: #1a1a1a;
+  position: absolute;
+  font-size: 0.95rem;
+}
+.cell.legal { outline: 2px solid #1d4e89; }
+.cell.sel { outline: 3px solid #2a9d8f; }
+.compose {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 8px;
+  padding: 0.75rem;
+  max-width: 36rem;
+}
+#word-forms { font-size: 0.9rem; color: var(--g-muted); min-width: 12rem; }
+button, input {
+  font: inherit;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--g-line);
+}
+button.primary, #btn-new {
+  background: var(--g-accent);
+  color: #fff;
+  border-color: var(--g-accent);
+  cursor: pointer;
+}

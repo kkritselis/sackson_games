@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Patterns</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Patterns</h1>
+    <button type="button" id="btn-new">New hand</button>
+  </header>
+  <p class="how">
+    <strong>How to play:</strong> Arrange your 12 cards (values 1–12) into four triples matching pattern
+    1-2-3 / 4-5-6 / 7-8-9 / 10-11-12, or odds/evens, or same-suit steps.
+    Moves: Line (earn chip), Top (free), Neighbor (pay chip). First player makes 1 move, then 2 each turn. Vs AI.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="chips"></div>
+    <div class="panel">
+      <h2>AI layout</h2>
+      <div id="ai-board" class="board"></div>
+    </div>
+    <div class="panel">
+      <h2>Your layout — select two cards to switch</h2>
+      <div class="toolbar">
+        <span class="muted" id="move-hint">Choose move type, then two positions.</span>
+        <button type="button" id="m-line">Line</button>
+        <button type="button" id="m-top">Top</button>
+        <button type="button" id="m-neighbor">Neighbor</button>
+        <button type="button" id="m-clear">Clear</button>
+      </div>
+      <div id="you-board" class="board"></div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

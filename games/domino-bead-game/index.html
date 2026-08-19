@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domino Bead Game — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Domino Bead Game</h1>
+    <button type="button" id="btn-new" class="btn">New game</button>
+  </header>
+
+  <p class="how">
+    <strong>How to play.</strong> You vs the computer with double-5 dominos (no blanks or sixes).
+    Place a tile so it correctly extends <em>two or more</em> number-groups already on the table
+    (groups work like crossword words — a repeating pattern locks once a number repeats, or all five faces appear).
+    Score is the product of the lengths of groups you extend (doubled for doubles).
+    At most three tiles may share long-side contact in a straight stack. Empty-hand or stalemate ends the game;
+    leftover tiles cost 5 (double) or 25 points each.
+  </p>
+
+  <main class="stage">
+    <section class="scores panel">
+      <div><span class="label">You</span> <strong id="score-you">0</strong></div>
+      <div><span class="label">Computer</span> <strong id="score-ai">0</strong></div>
+      <div id="turn-label" class="turn">Your turn</div>
+    </section>
+
+    <section class="panel board-wrap">
+      <div id="board" class="board" aria-label="Domino board"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Your hand</h2>
+      <div id="hand" class="hand"></div>
+      <div class="actions">
+        <button type="button" id="btn-pass" class="btn" disabled>Cannot play (pass)</button>
+        <label class="orient">
+          Orientation
+          <select id="orient">
+            <option value="h">Horizontal</option>
+            <option value="v">Vertical</option>
+            <option value="h-flip">Horizontal flipped</option>
+            <option value="v-flip">Vertical flipped</option>
+          </select>
+        </label>
+      </div>
+      <p id="status" class="status">Select a domino, then click a legal board cell for its left/top half.</p>
+    </section>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>

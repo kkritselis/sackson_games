@@ -1,0 +1,26 @@
+.diamond {
+  position: relative;
+  width: 220px;
+  height: 220px;
+  margin: 0.5rem auto 1rem;
+  background: linear-gradient(135deg, #c8e6c9, #a5d6a7);
+  border-radius: 12px;
+}
+.base {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: #fff;
+  border: 2px solid #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.75rem;
+  border-radius: 4px;
+}
+.base.on { background: #ffecb3; box-shadow: 0 0 0 3px #f9a825; }
+#b2 { top: 16px; left: 92px; }
+#b3 { top: 92px; left: 16px; }
+#b1 { top: 92px; right: 16px; }
+.home { bottom: 16px; left: 92px; }

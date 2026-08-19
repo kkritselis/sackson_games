@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Paper Boxing — A Gamut of Games</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="game.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Paper Boxing</h1>
+    <button type="button" id="btn-new">New game</button>
+  </header>
+  <section class="how">
+    <strong>How to play.</strong>
+    Each fighter has a 4×4 board: Start in the upper-left, numbers 1–15 elsewhere.
+    <em>Construction is simplified:</em> you may shuffle your board, then lock it; the computer builds its own.
+    First player is decided by whether the sum of both lower-right numbers is odd or even.
+    Each round both move to an unused adjacent square (including diagonal). Higher number wins the round.
+    Winner of a round leads the next (ties: same leader). Visit all 15 numbers. A fighter who cannot move is knocked out.
+  </section>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <div class="boards">
+      <div>
+        <h2>You <span id="role-you"></span></h2>
+        <div id="board-you" class="grid"></div>
+        <div class="score">Rounds: <strong id="sc-you">0</strong></div>
+      </div>
+      <div>
+        <h2>Computer <span id="role-ai"></span></h2>
+        <div id="board-ai" class="grid"></div>
+        <div class="score">Rounds: <strong id="sc-ai">0</strong></div>
+      </div>
+    </div>
+    <div class="actions" id="actions">
+      <button type="button" id="btn-shuffle">Shuffle my board</button>
+      <button type="button" id="btn-lock">Lock &amp; start</button>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

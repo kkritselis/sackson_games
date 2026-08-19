@@ -1,0 +1,65 @@
+.layout { display: flex; flex-wrap: wrap; gap: 1.25rem; }
+.board {
+  display: grid;
+  grid-template-columns: 28px repeat(8, 40px);
+  grid-template-rows: 28px repeat(8, 40px);
+  gap: 2px;
+  width: max-content;
+}
+.hdr {
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.75rem; font-weight: 700; color: var(--g-muted);
+}
+.cell {
+  width: 40px; height: 40px;
+  border: 1px solid var(--g-line);
+  background: #fff;
+  font-size: 0.65rem;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  border-radius: 4px;
+}
+.cell.you { background: #d6e4f5; }
+.cell.ai { background: #f7ddd0; }
+.cell.mort { box-shadow: inset 0 0 0 2px #333; }
+.side { min-width: 16rem; }
+.card {
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+.hand { margin-top: 0.4rem; font-size: 0.9rem; }
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #fff;
+  border: 1px solid var(--g-line);
+  border-radius: 8px;
+  padding: 0.75rem;
+}
+.status { font-weight: 600; margin-bottom: 0.75rem; }
+button, select, input {
+  font: inherit;
+  padding: 0.35rem 0.55rem;
+  border-radius: 6px;
+  border: 1px solid var(--g-line);
+}
+button.primary, #btn-new {
+  background: var(--g-accent);
+  color: #fff;
+  border-color: var(--g-accent);
+  cursor: pointer;
+}
+button:disabled { opacity: 0.4; }
+.chip {
+  display: inline-block;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  vertical-align: middle;
+  margin-right: 2px;
+  background-size: cover;
+}
+h2 { margin: 0 0 0.35rem; font-size: 1rem; }

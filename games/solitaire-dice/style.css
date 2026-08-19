@@ -1,0 +1,45 @@
+body.game-shell { --g-bg: #e8f0e9; --g-accent: #245c3a; }
+
+.dice-row {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
+}
+
+.die {
+  width: 64px;
+  height: 64px;
+  border-radius: 10px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  background: #fff;
+}
+
+.die.sel-a { border-color: #245c3a; box-shadow: 0 0 0 3px rgba(36, 92, 58, 0.25); }
+.die.sel-b { border-color: #b45309; box-shadow: 0 0 0 3px rgba(180, 83, 9, 0.25); }
+.die.sel-r { border-color: #9f1239; box-shadow: 0 0 0 3px rgba(159, 18, 57, 0.25); }
+
+.actions, .assign { margin-bottom: 1rem; display: flex; flex-wrap: wrap; gap: 0.6rem; align-items: center; }
+
+.sheets {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+table { border-collapse: collapse; width: 100%; background: #fff; }
+th, td { border: 1px solid #c5d5c8; padding: 0.35rem 0.5rem; text-align: left; }
+th { background: #d7e8db; }
+
+.scoreline { margin-top: 1rem; font-size: 1.1rem; }
+
+button {
+  font: inherit;
+  border: 1px solid #9bb59f;
+  background: #fff;
+  border-radius: 8px;
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  font-weight: 600;
+}

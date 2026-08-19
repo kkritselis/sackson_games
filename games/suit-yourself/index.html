@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Suit Yourself</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Suit Yourself</h1>
+    <button type="button" id="btn-new">New deal</button>
+  </header>
+  <p class="how">
+    <strong>How to play:</strong> Take face-up tops from columns. Turn 1 takes 1 card; then 2 of one suit; then 3; etc.
+    You may take fewer than allowed (choosing a thinner suit). Taking fewer switches to stage 2:
+    each turn claim all available tops of one suit. Most cards wins. Vs AI.
+  </p>
+  <div class="stage">
+    <div class="status" id="status"></div>
+    <div class="scoreboard panel" id="scores"></div>
+    <div class="panel">
+      <h2>Columns (top card available)</h2>
+      <div id="columns" class="columns"></div>
+    </div>
+    <div class="toolbar" id="actions"></div>
+    <div class="panel">
+      <h2>Your take</h2>
+      <div id="you-take" class="hand"></div>
+    </div>
+    <div class="panel">
+      <h2>AI take</h2>
+      <div id="ai-take" class="hand"></div>
+    </div>
+  </div>
+  <script src="../../js/cards.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>

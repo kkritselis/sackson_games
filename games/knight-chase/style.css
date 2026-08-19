@@ -1,0 +1,30 @@
+body.game-shell { --g-bg: #e9edf2; --g-accent: #1e293b; }
+.meta { margin: 0.35rem 0 0.75rem; color: #64748b; }
+.status { font-weight: 600; margin-bottom: 0.5rem; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(8, minmax(40px, 52px));
+  width: max-content;
+  border: 3px solid #1e293b;
+}
+.sq {
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.4rem;
+}
+.sq.light { background: #f1e7d0; }
+.sq.dark { background: #6b8f71; }
+.sq.hl { outline: 3px solid #ea580c; outline-offset: -3px; }
+.marker {
+  width: 28%; height: 28%; border-radius: 4px;
+  background: #0f172a; position: absolute; bottom: 10%; right: 10%;
+}
+.knight { z-index: 1; filter: drop-shadow(0 1px 1px rgba(0,0,0,.4)); }
+button, select {
+  font: inherit; border: 1px solid #94a3b8; background: #fff;
+  border-radius: 8px; padding: 0.3rem 0.55rem;
+}

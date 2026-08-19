@@ -1,0 +1,22 @@
+.columns {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.col {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 2px;
+  min-width: 76px;
+  padding: 0.35rem;
+  background: #e8e8e4;
+  border-radius: 8px;
+}
+.col .card-img { margin-top: -36px; }
+.col .card-img:last-child { margin-top: 0; }
+.col .card-img.available {
+  outline: 2px solid var(--g-accent);
+  z-index: 2;
+  position: relative;
+}

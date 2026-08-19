@@ -1,0 +1,34 @@
+.mode-bar { display: flex; gap: 1rem; margin-bottom: 0.75rem; }
+.panels { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 36px);
+  gap: 2px;
+  margin-bottom: 0.5rem;
+}
+.cell {
+  width: 36px; height: 36px;
+  border: 1px solid var(--g-line);
+  background: #fff;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem;
+  cursor: pointer;
+  user-select: none;
+}
+.cell.sel { outline: 2px solid var(--g-accent); }
+.cell.known { background: #f0f4fa; }
+.cell.guess { color: #666; font-style: italic; }
+.sym-pick { display: flex; gap: 0.35rem; margin-bottom: 0.5rem; }
+.hidden { display: none !important; }
+.status { font-weight: 600; }
+h2 { font-size: 1rem; margin: 0.4rem 0; }
+button {
+  font: inherit;
+  padding: 0.4rem 0.7rem;
+  border-radius: 8px;
+  border: 1px solid var(--g-line);
+  background: #fff;
+  cursor: pointer;
+}
+button.primary, #btn-new { background: var(--g-accent); color: #fff; border-color: var(--g-accent); }
+.actions { display: flex; flex-wrap: wrap; gap: 0.4rem; }

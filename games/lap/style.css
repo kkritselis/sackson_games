@@ -1,0 +1,52 @@
+body.game-shell {
+  background:
+    radial-gradient(circle at 20% 20%, #fff8e7 0%, transparent 40%),
+    linear-gradient(180deg, #f3ebe0, #d2c2a8);
+  min-height: 100vh;
+  font-family: "Source Sans 3", sans-serif;
+}
+.game-shell .how { background: #fffaf0; }
+h2 { font-family: "Special Elite", cursive; font-weight: 400; font-size: 1.1rem; margin: 0 0 0.4rem; }
+.status { font-weight: 600; }
+.toolbar, .probe-bar { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.75rem; align-items: center; }
+.seg, #lock-map, #probe, #submit, #new-game {
+  border: 1px solid #b8a88a;
+  background: #fff;
+  border-radius: 6px;
+  padding: 0.35rem 0.65rem;
+  font: inherit;
+  cursor: pointer;
+}
+.seg.active { background: #2c5f7a; color: #fff; border-color: #2c5f7a; }
+.grids { display: flex; flex-wrap: wrap; gap: 1.5rem; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(8, 32px);
+  grid-template-rows: repeat(8, 32px);
+  border: 2px solid #333;
+  width: max-content;
+  background: #fff;
+}
+.cell {
+  border: 1px solid #ccc;
+  font-size: 0.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  user-select: none;
+}
+.cell.s1 { background: #f6c1c1; }
+.cell.s2 { background: #c1d6f6; }
+.cell.s3 { background: #c8efc1; }
+.cell.s4 { background: #f6e9c1; }
+.cell.probe { outline: 2px solid #222; outline-offset: -2px; }
+.cell.mark { font-weight: 700; }
+.log { font-size: 0.85rem; max-width: 280px; white-space: pre-wrap; color: #444; }
+.counts { font-size: 0.85rem; color: #555; }
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: repeat(8, 10vw);
+    grid-template-rows: repeat(8, 10vw);
+  }
+}

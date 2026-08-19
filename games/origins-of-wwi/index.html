@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Origins of World War I</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Origins of World War I</h1>
+    <button type="button" id="new-game">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong> Simplified three-power crisis: you are Britain; France and Germany are AI. Each turn place Political Factors into embassies (max 5 per foreign box), optionally launch one diplomatic attack where you share a nation with a rival (die + odds table). After 8 rounds, score national objectives. Treaty rights need 10+ PF in a box.
+  </p>
+  <div class="stage">
+    <p class="status" id="status"></p>
+    <p class="meta">Round <span id="round">1</span>/8 · PF left this turn: <strong id="pf-left">14</strong></p>
+    <div class="layout">
+      <div id="map" class="map"></div>
+      <aside class="panel">
+        <h2>Place PF</h2>
+        <label>Target
+          <select id="target"></select>
+        </label>
+        <label>Amount (1–5 foreign)
+          <input id="amount" type="number" min="1" max="14" value="3" />
+        </label>
+        <button type="button" id="place">Place</button>
+        <hr />
+        <h2>Diplomatic attack</h2>
+        <label>Rival
+          <select id="rival">
+            <option value="France">France</option>
+            <option value="Germany">Germany</option>
+          </select>
+        </label>
+        <label>Common nation
+          <select id="common"></select>
+        </label>
+        <button type="button" id="attack">Attack</button>
+        <div class="die-wrap">
+          <img id="die" alt="die" width="48" height="48" />
+        </div>
+        <button type="button" id="end-turn" class="primary">End turn</button>
+        <pre class="log" id="log"></pre>
+      </aside>
+    </div>
+    <div id="scores" class="scores"></div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

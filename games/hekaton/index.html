@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hekaton — A Gamut of Games</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <header class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>Hekaton</h1>
+    <button type="button" id="btn-new" class="btn">New game</button>
+  </header>
+  <p class="how">
+    <strong>How to play.</strong>
+    Cards are digits: Ace=1, 2–9 as face value, King=0. Play one card onto the table each turn, then draw.
+    If you can arrange all table cards into numbers that add up to a multiple of 100, you score that total and clear the table.
+    First to 5,000 points wins (shortened from 10,000 for a quicker match).
+  </p>
+  <div class="stage">
+    <div class="status-bar">
+      <span id="status">Your turn — play a card.</span>
+      <span>You <strong id="score-you">0</strong> · AI <strong id="score-ai">0</strong> · Stock <span id="stock-n">0</span></span>
+    </div>
+    <div class="table-zone">
+      <h2>Table</h2>
+      <div id="table" class="digit-row"></div>
+      <div id="arrange" class="arrange-panel hidden">
+        <p>Arrange digits into addends that total a multiple of 100.</p>
+        <div id="rows" class="rows"></div>
+        <div class="arrange-actions">
+          <button type="button" id="btn-add-row" class="btn ghost">Add row</button>
+          <button type="button" id="btn-score" class="btn">Score arrangement</button>
+          <button type="button" id="btn-skip" class="btn ghost">Cannot / skip scoring</button>
+        </div>
+        <p id="preview" class="preview"></p>
+      </div>
+    </div>
+    <div class="hands">
+      <div>
+        <h2>Computer</h2>
+        <div id="ai-hand" class="hand"></div>
+      </div>
+      <div>
+        <h2>You — click a card to play</h2>
+        <div id="you-hand" class="hand"></div>
+      </div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The No Game</title>
+  <link rel="stylesheet" href="../../css/game-shell.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="game-shell">
+  <div class="topbar">
+    <a href="../../index.html">All games</a>
+    <h1>The No Game</h1>
+    <button id="newGame" type="button">New party</button>
+  </div>
+  <p class="how">
+    <strong>Adaptation.</strong> Party ribbon pins become a timed chat round vs AI guests.
+    Saying the word “no” (whole word) costs you every ribbon to the asker. Other refusals are fine.
+    Bait guests with the reply buttons — if they slip and say no, you take theirs. Most ribbons when time ends wins.
+  </p>
+  <div class="stage">
+    <div class="hud-line">Time <strong id="timer">2:00</strong> · Your score <strong id="score">1</strong> ribbon(s)</div>
+    <div class="ribbon-bar" id="ribbons"></div>
+    <div class="chat" id="chat"></div>
+    <form id="form" class="composer">
+      <input id="input" type="text" placeholder="Type a reply (avoid the word no)…" autocomplete="off" />
+      <button type="submit">Say it</button>
+    </form>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>
